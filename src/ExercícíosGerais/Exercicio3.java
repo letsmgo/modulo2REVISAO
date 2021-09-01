@@ -30,5 +30,8 @@ public class Exercicio3 {
         else if (media == 10){
             System.out.println("Parabéns, voce foi APROVADO com distinção!");
         }
+        else {
+            System.out.println("Valor inválido, por favor digite novamente");
+        }
     }
 }

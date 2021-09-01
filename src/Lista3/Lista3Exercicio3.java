@@ -3,7 +3,7 @@ package br.com.zup;
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.Scanner;
 
-public class ListaExercicio3 {
+public class Lista3Exercicio3 {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
         int contadorDeRespostas = 0;
@@ -47,6 +47,23 @@ public class ListaExercicio3 {
         if (resposta.equals("S")){
             contadorDeRespostas = contadorDeRespostas + 1;
         }
-        System.out.println(contadorDeRespostas);
+        switch (contadorDeRespostas){
+
+            case 2:
+                System.out.println("Preciso que você chame um advogado, você é considerado suspeito!");
+                break;
+            case 3:
+                System.out.println("Você é considerado suspeito! Oriento que chame um advogado");
+                break;
+            case 4:
+                System.out.println("Você é considerado cumplice! Oriento que chame um advogado");
+                break;
+            case 5:
+                System.out.println("Você é considerado assassino! Oriento que chame um advogado");
+                break;
+            default:
+                System.out.println("Você é inocente, perdoe o incomodo");
+                break;
+        }
     }
 }

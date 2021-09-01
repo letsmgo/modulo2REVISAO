@@ -2,13 +2,16 @@ package br.com.zup;
 
 import java.util.Scanner;
 
+// Os gestores da Zup resolveram dar um aumento de salário aos seus colaboradores e lhe
+// contrataram para desenvolver o programa que calcula os reajustes. Portanto, faça um programa que recebe o
+// salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
+//Salários até R$ 280,00 (incluindo), receberão aumento de 20%
+//Salários entre R$ 280,00 e R$ 700,00 (incluindo), receberão aumento de 15%
+//Salários entre R$ 700,00 e R$ 1500,00 (incluindo), receberão aumento de 10%
+//Salários de R$ 1500,00 em diante, receberão aumento de 5%
+
 public class Exercicio4 {
     public static void main(String[] args) {
-        // Os gestores da Zup resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver o programa que calcula os reajustes. Portanto, faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
-        //Salários até R$ 280,00 (incluindo), receberão aumento de 20%
-        //Salários entre R$ 280,00 e R$ 700,00 (incluindo), receberão aumento de 15%
-        //Salários entre R$ 700,00 e R$ 1500,00 (incluindo), receberão aumento de 10%
-        //Salários de R$ 1500,00 em diante, receberão aumento de 5%
 
         Scanner leitor = new Scanner(System.in);
 
@@ -46,6 +49,9 @@ public class Exercicio4 {
             System.out.println("Você recebeu um aumento de 5%");
             System.out.println("Em números, foi um aumento de R$" + soma5);
             System.out.println("O que resultou em um salário corrigido de: R$" + valorCorrigido5);
+        }
+        else {
+            System.out.println("Valor inválido, por favor digite novamente");
         }
     }
 }

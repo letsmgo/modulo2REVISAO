@@ -2,7 +2,7 @@ package br.com.zup;
 
 import java.util.Scanner;
 
-public class EstruturasDeRepeticaoExercicio4 {
+public class Lista4Exercicio4 {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
         double quantidadeDeNumeros;
