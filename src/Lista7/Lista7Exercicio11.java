@@ -27,7 +27,6 @@ public class Lista7Exercicio11 {
             }
             contador++;
         }
-
         System.out.println("Os numeros informados foram: ");
         System.out.println(numeros);
         System.out.println("Destes são pares: ");
