@@ -15,7 +15,7 @@ public class Lista7Exercicio7 {
         System.out.println("Por favor, digite um numero maior que o anterior: ");
         segundoNumero = leitor.nextInt();
 
-        for (int i = primeiroNumero; i < segundoNumero; i++) {
+        for (int i = primeiroNumero+1; i < segundoNumero; i++) {
             System.out.println("Os números entre eles são: " + i);
 
             contador++;
