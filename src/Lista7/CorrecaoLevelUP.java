@@ -11,12 +11,12 @@ public class CorrecaoLevelUP {
         Map<String, String> alunos = new HashMap<String, String>();
         boolean chave = true;
 
-        System.out.println("Seja bem vindo ao Estrelas Classroom \n");
+        System.out.println("\nSeja bem vindo ao Estrelas Classroom \n");
         int opcao = 0;
 
         while (chave == true) {
             //Menu - apresentar uma série de opcoes pro usuario
-            System.out.println("\n Digite 1: Para cadastrar um aluno;");
+            System.out.println("\nDigite 1: Para cadastrar um aluno;");
             System.out.println("Digite 2: Para visualizar os alunos do gerenciador.");
             System.out.println("Digite 3: Para remover um aluno");
             System.out.println("Digite 4: Para sair do gerenciador.");
@@ -33,8 +33,19 @@ public class CorrecaoLevelUP {
                 System.out.println("Digite seu e-mail: ");
                 String email = leitor.nextLine();
 
+                if (alunos.size() != 0) {
+                    for (String verificarChave : alunos.keySet()) {
+                        if (verificarChave.equals(email)) {
+                            System.out.println("E-mail ja cadastrado.");
+                        } else {
+                            alunos.put(" " + email + " ", " Nome: " + nome + " Telefone: " + telefone);
+                            System.out.println("Usuário já cadastrado.");
+                        }
+                    }
+                } else {
+                    alunos.put(" " + email + " ", " Nome: " + nome + " Telefone: " + telefone);
+                }
                 //fazendo o cadastro
-                alunos.put(" " + email + " ", " Nome: " + nome + " Telefone: " + telefone);
                 System.out.println(alunos);
 
             } else if (opcao == 2) {
@@ -48,13 +59,12 @@ public class CorrecaoLevelUP {
                 for (String emailAluno : alunos.keySet()) {
                     if (emailAluno.equals(emailASerDeletado)) {
                         System.out.println("E-mail deletado com sucesso!");
-                        emailDeletado =emailASerDeletado;
+                        emailDeletado = emailASerDeletado;
                         // break; possibilidade para parar o loop
                     }
                 }
                 alunos.remove(emailASerDeletado);
-            }
-            else if (opcao == 4) {
+            } else if (opcao == 4) {
                 // sair do menu
                 chave = false;
                 System.out.println("Gerenciador finalizado com sucesso");
